@@ -1,35 +1,28 @@
-const bici = [
-
+const teams = [
     {
-        nome: "bici1",
-        peso: 17,
+        nome: "squadra1",
+        punti_fatti: 0,
+        falli_subiti: 0
     },
 
     {
-        nome: "bici1",
-        peso: 15,
+        nome: "squadra2",
+        punti_fatti: 0,
+        falli_subiti: 0
     },
 
     {
-        nome: "bici1",
-        peso: 16,
+        nome: "squadra3",
+        punti_fatti: 0,
+        falli_subiti: 0
     },
 
     {
-        nome: "bici1",
-        peso: 3,
-    },
-
-    {
-        nome: "bici1",
-        peso: 5,
+        nome: "squadra4",
+        punti_fatti: 0,
+        falli_subiti: 0
     },
 
 ]
 
-
-let min = Math.min(...bici.map(item => item.peso));
-console.log("min: " + min);
-
-
-document.getElementById('displaydata').innerHTML =("la bici che pesa meno : " + min);
+console.log(teams);
