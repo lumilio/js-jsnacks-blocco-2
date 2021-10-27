@@ -13,44 +13,23 @@ Stampare a schermo la bici con peso minore.
 
 
 /*
-* Crea un array vuoto e chiedi all’utente un numero
-* da inserire nell’array. Continua a chiedere i numeri
-* all’utente e a inserirli nell’array fino a quando
-* la somma degli elementi è minore di 50.
+* Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. 
+Continua a chiedere i numeri all’utente e a inserirli nell’array fino a quando la somma degli elementi è minore di 50.
 */ 
 
 
 
-const bici = [
-    {
-        nome: "bici1",
-        peso: 10,
-    },
+const numeri = []
 
-    {
-        nome: "bici2",
-        peso: 20,
-    },
+let sum = 0
 
-    {
-        nome: "bici3",
-        peso: 30,
-    },
+while (sum < 50) {
+    let input = Number(prompt("Enter a number"));
+    numeri.push(input)
+    numeri.forEach((item)=>{
+        sum += item;
+    })
+}
 
-    {
-        nome: "bici4",
-        peso: 5,
-    },
-]
+console.log(numeri);
 
-
-let bicileggera = bici[0]
-
-
-bici.forEach((item) =>{
-    if (item.peso < bicileggera.peso) {
-        bicileggera = item;
-    }
-})
-
-console.log(bicileggera);
