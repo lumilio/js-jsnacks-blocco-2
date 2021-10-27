@@ -5,6 +5,13 @@
 
 
 
+/* Creare un array di oggetti: ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare a schermo la bici con peso minore.
+ */
+
+
+
+
 /*
 * Crea un array vuoto e chiedi all’utente un numero
 * da inserire nell’array. Continua a chiedere i numeri
@@ -14,58 +21,36 @@
 
 
 
-
-
-/* Creare un array di oggetti: ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
-Stampare a schermo la bici con peso minore.
- */
-
-
-
-
-
-
-
-
-
-
-const squadre = [
+const bici = [
     {
-        nome: "squadra1",
-        punti: 0,
-        falli: 0
+        nome: "bici1",
+        peso: 10,
     },
 
     {
-        nome: "squadra2",
-        punti: 0,
-        falli: 0
+        nome: "bici2",
+        peso: 20,
     },
 
     {
-        nome: "squadra3",
-        punti: 0,
-        falli: 0
+        nome: "bici3",
+        peso: 30,
     },
 
     {
-        nome: "squadra4",
-        punti: 0,
-        falli: 0
+        nome: "bici4",
+        peso: 5,
     },
 ]
 
 
+let bicileggera = bici[0]
 
 
-function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
+bici.forEach((item) =>{
+    if (item.peso < bicileggera.peso) {
+        bicileggera = item;
+    }
+})
 
-for (let index = 0; index < squadre.length; index++) {
-    const element = squadre[index];
-    element.punti = randomIntFromInterval(1, 30)
-    element.falli = randomIntFromInterval(1, 30)  
-}
-
-console.log(squadre);
+console.log(bicileggera);
