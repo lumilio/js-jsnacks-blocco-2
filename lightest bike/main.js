@@ -43,4 +43,11 @@ bici.forEach((item) =>{
     }
 })
 
+/* for (let index = 0; index < bici.length; index++) {
+    const item = bici[index];
+    if (item.peso < bicileggera.peso) {
+        bicileggera = item;
+    } 
+} */
+
 console.log(bicileggera);
